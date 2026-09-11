@@ -1202,3 +1202,217 @@ backBtn.addEventListener(
    ========================================================= */
 
 renderStep();
+
+/* =========================================================
+   GOOGLE ANALYTICS CONSENT
+========================================================= */
+
+const GA_MEASUREMENT_ID = "G-WTJVSGKF11";
+const CONSENT_KEY = "mohsin_labs_analytics_consent";
+
+const consentBanner = document.getElementById("consentBanner");
+const acceptAnalyticsBtn = document.getElementById("acceptAnalytics");
+const rejectAnalyticsBtn = document.getElementById("rejectAnalytics");
+const cookieSettingsBtn = document.getElementById("cookieSettingsBtn");
+
+
+function loadGoogleAnalytics() {
+
+    if (window.__mohsinAnalyticsLoaded) {
+        return;
+    }
+
+    window.__mohsinAnalyticsLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function () {
+        window.dataLayer.push(arguments);
+    };
+
+
+    /* Analytics allowed, advertising stays disabled */
+
+    gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+    });
+
+
+    /* Load Google Analytics */
+
+    const googleTag = document.createElement("script");
+
+    googleTag.async = true;
+
+    googleTag.src =
+        `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+
+    document.head.appendChild(googleTag);
+
+
+    gtag("js", new Date());
+
+    gtag("config", GA_MEASUREMENT_ID);
+}
+
+
+function hideConsentBanner() {
+
+    if (consentBanner) {
+        consentBanner.hidden = true;
+    }
+
+}
+
+
+function showConsentBanner() {
+
+    if (consentBanner) {
+        consentBanner.hidden = false;
+    }
+
+}
+
+
+function deleteAnalyticsCookies() {
+
+    document.cookie
+        .split(";")
+        .forEach(cookie => {
+
+            const cookieName =
+                cookie
+                    .split("=")[0]
+                    .trim();
+
+            if (
+                cookieName === "_ga" ||
+                cookieName.startsWith("_ga_")
+            ) {
+
+                document.cookie =
+                    `${cookieName}=; Max-Age=0; path=/; SameSite=Lax`;
+
+            }
+
+        });
+
+}
+
+
+function acceptAnalytics() {
+
+    localStorage.setItem(
+        CONSENT_KEY,
+        "granted"
+    );
+
+    loadGoogleAnalytics();
+
+    hideConsentBanner();
+
+}
+
+
+function rejectAnalytics() {
+
+    localStorage.setItem(
+        CONSENT_KEY,
+        "denied"
+    );
+
+
+    /*
+       If Analytics was previously enabled,
+       change consent and remove analytics cookies.
+    */
+
+    if (
+        window.__mohsinAnalyticsLoaded &&
+        typeof window.gtag === "function"
+    ) {
+
+        gtag("consent", "update", {
+            analytics_storage: "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+        });
+
+        deleteAnalyticsCookies();
+
+        hideConsentBanner();
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 150);
+
+        return;
+    }
+
+
+    hideConsentBanner();
+
+}
+
+
+/* =========================================================
+   INITIAL CONSENT STATE
+========================================================= */
+
+const savedConsent =
+    localStorage.getItem(CONSENT_KEY);
+
+
+if (savedConsent === "granted") {
+
+    loadGoogleAnalytics();
+
+}
+else if (savedConsent === "denied") {
+
+    hideConsentBanner();
+
+}
+else {
+
+    showConsentBanner();
+
+}
+
+
+/* =========================================================
+   BUTTON EVENTS
+========================================================= */
+
+if (acceptAnalyticsBtn) {
+
+    acceptAnalyticsBtn.addEventListener(
+        "click",
+        acceptAnalytics
+    );
+
+}
+
+
+if (rejectAnalyticsBtn) {
+
+    rejectAnalyticsBtn.addEventListener(
+        "click",
+        rejectAnalytics
+    );
+
+}
+
+
+if (cookieSettingsBtn) {
+
+    cookieSettingsBtn.addEventListener(
+        "click",
+        showConsentBanner
+    );
+
+}

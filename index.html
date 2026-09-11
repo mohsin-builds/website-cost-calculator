@@ -3,25 +3,6 @@
 <head>
 
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTJVSGKF11"></script>
-    <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-WTJVSGKF11');
-    </script>
-    
-    <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTJVSGKF11"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-WTJVSGKF11');
-        </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -839,29 +820,36 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+<footer class="site-footer">
 
-        <div class="page-container footer-inner">
+    <div class="page-container footer-inner">
+
+        <div class="footer-left">
 
             <span>
                 Built by
-                <a
-                    href="https://mohsinbuilds.netlify.app"
-                    target="_blank"
-                >
+                <a href="#">
                     Mohsin Builds
                 </a>
             </span>
 
-            <span>
-                Smart tools for a digital world.
-            </span>
+            <button
+                type="button"
+                class="cookie-settings-link"
+                id="cookieSettingsBtn"
+            >
+                Cookie settings
+            </button>
 
         </div>
 
-    </footer>
+        <span>
+            Smart tools for a digital world.
+        </span>
 
-    <script src="script.js"></script>
+    </div>
+
+</footer>
 
     <script>
         lucide.createIcons();
@@ -915,6 +903,56 @@
     ]
 }
 </script>
+
+
+<!-- COOKIE / ANALYTICS CONSENT -->
+<div
+    class="consent-banner"
+    id="consentBanner"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="consentTitle"
+    aria-describedby="consentText"
+    hidden
+>
+    <div class="consent-card">
+
+        <div class="consent-copy">
+            <span class="consent-label">YOUR PRIVACY</span>
+
+            <h2 id="consentTitle">
+                Help us improve Mohsin Labs
+            </h2>
+
+            <p id="consentText">
+                We use optional analytics to understand how people use
+                this calculator and improve future tools. You can accept
+                or reject analytics. The calculator works either way.
+            </p>
+        </div>
+
+        <div class="consent-actions">
+            <button
+                type="button"
+                class="consent-btn consent-btn-secondary"
+                id="rejectAnalytics"
+            >
+                Reject
+            </button>
+
+            <button
+                type="button"
+                class="consent-btn consent-btn-primary"
+                id="acceptAnalytics"
+            >
+                Accept analytics
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
