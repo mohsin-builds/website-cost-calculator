@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+        rel="icon"
+        type="image/png"
+        href="assests/Images/favicon.png"
+    >
+    <title>Website Cost Calculator 2026 | Mohsin Labs</title>
+
+    <meta
+        name="description"
+        content="Get a realistic website cost estimate in less than 60 seconds with Mohsin Labs."
+    >
+
+        <!-- OPEN GRAPH -->
+        <meta
+            property="og:title"
+            content="Website Cost Calculator 2026 | Mohsin Labs"
+        >
+
+        <meta
+            property="og:description"
+            content="Get a realistic website cost estimate in under 60 seconds based on your pages, design, features, SEO and project requirements."
+        >
+
+        <meta
+            property="og:type"
+            content="website"
+        >
+
+        <meta
+            property="og:site_name"
+            content="Mohsin Labs"
+        >
+
+
+        <!-- TWITTER / SOCIAL -->
+        <meta
+            name="twitter:card"
+            content="summary_large_image"
+        >
+
+        <meta
+            name="twitter:title"
+            content="Website Cost Calculator 2026 | Mohsin Labs"
+        >
+
+        <meta
+            name="twitter:description"
+            content="Estimate the cost of your next website in under 60 seconds."
+        >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="page-container header-inner">
+
+            <a href="#" class="brand">
+                <div class="brand-mark">M</div>
+
+                <div class="brand-text">
+                    <strong>Mohsin Labs</strong>
+                    <span>by Mohsin Builds</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#tools">Tools</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#resources">Resources</a>
+            </nav>
+
+            <a
+                href="https://mohsinbuilds.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mohsin-builds-btn"
+            >
+                Mohsin Builds
+                <span>↗</span>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- MAIN HERO -->
+    <main class="hero">
+
+        <div class="page-container hero-layout">
+
+            <!-- LEFT CONTENT -->
+            <section class="hero-content">
+
+                <div class="tool-badge">
+                    <span class="badge-dot"></span>
+                    FREE BUSINESS TOOL
+                </div>
+
+                <h1>
+                    Website Cost
+                    <span>Calculator</span>
+                </h1>
+
+                <p class="hero-description">
+                    Get a realistic website estimate in less
+                    than 60 seconds.
+                </p>
+
+                <!-- BENEFITS -->
+                <div class="benefits">
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+
+                        <div>
+                            <strong>Free to use</strong>
+                            <span>No hidden fees. No commitment.</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Instant estimate</strong>
+                            <span>Get a realistic budget range.</span>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <i data-lucide="chart-no-axes-column-increasing"></i>
+                        </div>
+
+                        <div>
+                            <strong>Built for real businesses</strong>
+                            <span>Websites, e-commerce, bookings & more.</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- HANDWRITTEN TEXT -->
+                <div class="handwritten">
+                    <span>Plan</span>
+                    <span>Build</span>
+                    <span>Grow</span>
+                </div>
+
+            </section>
+
+            <!-- CALCULATOR -->
+            <section class="calculator-wrapper">
+
+                <div class="calculator-card">
+
+                    <!-- CALCULATOR PROGRESS -->
+                    <div class="calculator-header">
+
+                        <div class="step-row">
+                            <span id="stepText">STEP 01 OF 08</span>
+                            <span id="progressPercent">12%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-bar"
+                                id="progressBar"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                    <!-- QUESTION -->
+                    <div class="question-area">
+
+                        <h2 id="questionTitle">
+                            What type of business is this for?
+                        </h2>
+
+                        <p id="questionSubtitle">
+                            Choose the option that best describes your business.
+                        </p>
+
+                    </div>
+
+                    <!-- OPTIONS -->
+                    <div class="options-grid" id="optionsGrid">
+
+                        <button
+                            class="option-card"
+                            data-value="local-business"
+                        >
+                            <i data-lucide="store"></i>
+
+                            <strong>
+                                Local Business
+                            </strong>
+
+                            <span>
+                                Services, shops,<br>
+                                companies
+                            </span>
+                        </button>
+
+                        <button
+                            class="option-card"
+                            data-value="restaurant"
+                        >
+                            <i data-lucide="utensils"></i>
+
+                            <strong>
+                                Restaurant
+                            </strong>
+
+                            <span>
+                                Restaurant, café,<br>
+                                food business
+                            </span>
+                        </button>
+
+                        <button
+                            class="option-card"
+                            data-value="tourism"
+                        >
+                            <i data-lucide="plane"></i>
+
+                            <strong>
+                                Tourism
+                            </strong>
+
+                            <span>
+                                Hotels, villas,<br>
+                                tours
+                            </span>
+                        </button>
+
+                        <button
+                            class="option-card"
+                            data-value="ecommerce"
+                        >
+                            <i data-lucide="shopping-cart"></i>
+
+                            <strong>
+                                E-commerce
+                            </strong>
+
+                            <span>
+                                Online store or<br>
+                                product brand
+                            </span>
+                        </button>
+
+                        <button
+                            class="option-card"
+                            data-value="professional"
+                        >
+                            <i data-lucide="briefcase-business"></i>
+
+                            <strong>
+                                Professional Service
+                            </strong>
+
+                            <span>
+                                Consultant, agency,<br>
+                                freelancer
+                            </span>
+                        </button>
+
+                        <button
+                            class="option-card"
+                            data-value="other"
+                        >
+                            <i data-lucide="ellipsis"></i>
+
+                            <strong>
+                                Other
+                            </strong>
+
+                            <span>
+                                Something<br>
+                                different
+                            </span>
+                        </button>
+
+                    </div>
+
+                    <!-- CONTINUE -->
+                    <button
+                        class="continue-btn"
+                        id="continueBtn"
+                        disabled
+                    >
+                        Continue
+                        <span>→</span>
+                    </button>
+
+                    <div class="privacy-note">
+                        <i data-lucide="lock-keyhole"></i>
+                        <span>Your answers are not stored.</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- RIGHT VISUAL -->
+
+            <aside class="workspace-visual">
+
+                <img
+                    src="assests/Images/workspace-visual.png"
+                    alt="Mohsin Labs modern website design workspace"
+                    class="workspace-image"
+                >
+
+            </aside>
+
+        </div>
+
+        <!-- BUSINESS TYPES -->
+        <section class="business-strip">
+
+            <div class="page-container">
+
+                <p class="strip-title">
+                    BUILT FOR BUSINESSES LIKE YOURS
+                </p>
+
+                <div class="business-types">
+
+                    <div>
+                        <i data-lucide="store"></i>
+                        Shops
+                    </div>
+
+                    <div>
+                        <i data-lucide="utensils"></i>
+                        Restaurants
+                    </div>
+
+                    <div>
+                        <i data-lucide="building-2"></i>
+                        Agencies
+                    </div>
+
+                    <div>
+                        <i data-lucide="shopping-cart"></i>
+                        E-commerce
+                    </div>
+
+                    <div>
+                        <i data-lucide="user-round"></i>
+                        Consultants
+                    </div>
+
+                    <div>
+                        <i data-lucide="house"></i>
+                        Local Businesses
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+        <section class="stats-section">
+
+            <div class="page-container stats-inner">
+
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Free to Use</span>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat">
+                    <strong>2026</strong>
+                    <span>Updated Pricing</span>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat">
+                    <strong>&lt; 60 sec</strong>
+                    <span>Instant Estimate</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEO / INFORMATION SECTION -->
+<section class="seo-section" id="about">
+
+    <div class="page-container seo-container">
+
+        <div class="seo-heading">
+
+            <span class="section-eyebrow">
+                WEBSITE PRICING EXPLAINED
+            </span>
+
+            <h2>
+                How much does a website cost?
+            </h2>
+
+            <p>
+                Website pricing depends on the size of the project,
+                design quality, functionality, content, SEO requirements
+                and how quickly the website needs to launch.
+                Our calculator gives you a practical starting range
+                based on the requirements you select.
+            </p>
+
+        </div>
+
+
+        <div class="pricing-guide">
+
+            <article class="pricing-guide-card">
+
+                <div class="guide-icon">
+                    <i data-lucide="panel-top"></i>
+                </div>
+
+                <h3>Landing Pages</h3>
+
+                <p>
+                    Ideal for campaigns, personal brands,
+                    simple services or businesses that need
+                    one focused page.
+                </p>
+
+                <span>
+                    Simple and focused
+                </span>
+
+            </article>
+
+
+            <article class="pricing-guide-card">
+
+                <div class="guide-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+
+                <h3>Business Websites</h3>
+
+                <p>
+                    Multi-page websites for companies,
+                    agencies, restaurants, consultants
+                    and professional services.
+                </p>
+
+                <span>
+                    Built for business growth
+                </span>
+
+            </article>
+
+
+            <article class="pricing-guide-card">
+
+                <div class="guide-icon">
+                    <i data-lucide="shopping-bag"></i>
+                </div>
+
+                <h3>E-commerce</h3>
+
+                <p>
+                    Online stores usually require more
+                    development because of products,
+                    checkout, payments and store management.
+                </p>
+
+                <span>
+                    More functionality
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COST FACTORS -->
+<section class="cost-factors-section" id="resources">
+
+    <div class="page-container cost-factors-container">
+
+        <div class="cost-factors-copy">
+
+            <span class="section-eyebrow">
+                WHAT AFFECTS THE PRICE?
+            </span>
+
+            <h2>
+                What determines the cost of a website?
+            </h2>
+
+            <p>
+                Two websites can look similar at first glance
+                but require very different amounts of work.
+                These are some of the biggest factors that
+                influence the final project scope.
+            </p>
+
+        </div>
+
+
+        <div class="cost-factor-list">
+
+            <div class="cost-factor">
+
+                <span class="factor-number">01</span>
+
+                <div>
+                    <h3>Number of pages</h3>
+
+                    <p>
+                        Larger websites require more layouts,
+                        content preparation and development.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cost-factor">
+
+                <span class="factor-number">02</span>
+
+                <div>
+                    <h3>Design complexity</h3>
+
+                    <p>
+                        Premium custom interfaces require
+                        more design work than template-based
+                        or simple layouts.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cost-factor">
+
+                <span class="factor-number">03</span>
+
+                <div>
+                    <h3>Features & integrations</h3>
+
+                    <p>
+                        Booking systems, payments, member areas
+                        and other functionality increase
+                        development complexity.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="cost-factor">
+
+                <span class="factor-number">04</span>
+
+                <div>
+                    <h3>Content & SEO</h3>
+
+                    <p>
+                        Copywriting, page structure and search
+                        optimisation can add significant value
+                        and additional project work.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+
+    <div class="page-container faq-container">
+
+        <div class="faq-heading">
+
+            <span class="section-eyebrow">
+                FREQUENTLY ASKED QUESTIONS
+            </span>
+
+            <h2>
+                Website cost calculator FAQ
+            </h2>
+
+            <p>
+                A few important things to know before
+                planning your website project.
+            </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+
+                <summary>
+                    How accurate is this website cost calculator?
+                    <span>+</span>
+                </summary>
+
+                <div class="faq-answer">
+                    <p>
+                        The calculator provides a professional
+                        planning range based on the project
+                        requirements you select. It is intended
+                        as a starting estimate rather than a
+                        fixed quotation.
+                    </p>
+                </div>
+
+            </details>
+
+
+            <details class="faq-item">
+
+                <summary>
+                    What affects the cost of a website?
+                    <span>+</span>
+                </summary>
+
+                <div class="faq-answer">
+                    <p>
+                        Website cost is influenced by factors
+                        such as the number of pages, design
+                        complexity, e-commerce functionality,
+                        booking systems, payments, copywriting,
+                        SEO and other integrations.
+                    </p>
+                </div>
+
+            </details>
+
+
+            <details class="faq-item">
+
+                <summary>
+                    Why does an e-commerce website usually cost more?
+                    <span>+</span>
+                </summary>
+
+                <div class="faq-answer">
+                    <p>
+                        E-commerce projects generally require
+                        additional functionality including product
+                        management, shopping carts, checkout,
+                        payment processing and store configuration.
+                    </p>
+                </div>
+
+            </details>
+
+
+            <details class="faq-item">
+
+                <summary>
+                    Is the calculator result a fixed Mohsin Builds quote?
+                    <span>+</span>
+                </summary>
+
+                <div class="faq-answer">
+                    <p>
+                        No. The result is a planning estimate.
+                        A final Mohsin Builds quote would depend
+                        on the confirmed project scope, content,
+                        integrations and specific requirements.
+                    </p>
+                </div>
+
+            </details>
+
+
+            <details class="faq-item">
+
+                <summary>
+                    How long does it take to build a website?
+                    <span>+</span>
+                </summary>
+
+                <div class="faq-answer">
+                    <p>
+                        Timelines vary depending on the size and
+                        complexity of the project. A focused landing
+                        page can be completed much faster than a
+                        large e-commerce website or custom platform.
+                        The calculator provides an estimated build
+                        time based on your selections.
+                    </p>
+                </div>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="quote-cta">
+
+    <div class="page-container">
+
+        <div class="quote-cta-card">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    NEED A REAL PROJECT QUOTE?
+                </span>
+
+                <h2>
+                    Turn your estimate into a real website.
+                </h2>
+
+                <p>
+                    Your calculator result is a planning range.
+                    For an exact project proposal, tell Mohsin Builds
+                    what you want to create.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://mohsinbuilds.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="quote-cta-btn"
+            >
+                Discuss your project
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="page-container footer-inner">
+
+            <span>
+                Built by
+                <a
+                    href="https://mohsinbuilds.netlify.app"
+                    target="_blank"
+                >
+                    Mohsin Builds
+                </a>
+            </span>
+
+            <span>
+                Smart tools for a digital world.
+            </span>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How accurate is this website cost calculator?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The calculator provides a professional planning range based on the project requirements selected. It is intended as a starting estimate rather than a fixed quotation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What affects the cost of a website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Website cost is influenced by the number of pages, design complexity, e-commerce functionality, booking systems, payments, copywriting, SEO and other integrations."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Why does an e-commerce website usually cost more?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "E-commerce projects generally require additional functionality including product management, shopping carts, checkout, payment processing and store configuration."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is the calculator result a fixed Mohsin Builds quote?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The result is a planning estimate. A final Mohsin Builds quote depends on the confirmed project scope, content, integrations and specific requirements."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Timelines vary depending on project size and complexity. The calculator provides an estimated build time based on the user's selections."
+            }
+        }
+    ]
+}
+</script>
+
+</body>
+</html>
