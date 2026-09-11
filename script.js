@@ -18,24 +18,24 @@ const questions = [
                 label: "Restaurant",
                 desc: "Restaurant, café, food business",
                 icon: "utensils",
-                min: 100,
-                max: 250
+                min: 0,
+                max: 0
             },
             {
                 value: "tourism",
                 label: "Tourism",
                 desc: "Hotels, villas, tours",
                 icon: "plane",
-                min: 150,
-                max: 350
+                min: 0,
+                max: 0
             },
             {
                 value: "ecommerce",
                 label: "E-commerce",
                 desc: "Online store or product brand",
                 icon: "shopping-cart",
-                min: 450,
-                max: 900
+                min: 0,
+                max: 0
             },
             {
                 value: "professional",
@@ -43,15 +43,15 @@ const questions = [
                 desc: "Consultant, agency, freelancer",
                 icon: "briefcase-business",
                 min: 0,
-                max: 150
+                max: 0
             },
             {
                 value: "other",
                 label: "Other",
                 desc: "Something different",
                 icon: "ellipsis",
-                min: 100,
-                max: 300
+                min: 0,
+                max: 0
             }
         ]
     },
@@ -67,48 +67,48 @@ const questions = [
                 label: "Landing Page",
                 desc: "One focused page for leads or campaigns",
                 icon: "panel-top",
-                min: 650,
-                max: 1100
+                min: 100,
+                max: 150
             },
             {
                 value: "brochure",
                 label: "Brochure Website",
                 desc: "A clean website for your company",
                 icon: "building-2",
-                min: 1100,
-                max: 1900
+                min: 220,
+                max: 350
             },
             {
                 value: "business",
                 label: "Business Website",
                 desc: "A stronger multi-page business presence",
                 icon: "monitor",
-                min: 1600,
-                max: 2900
+                min: 300,
+                max: 450
             },
             {
                 value: "store",
                 label: "Online Store",
                 desc: "Products, cart, checkout and payments",
                 icon: "shopping-bag",
-                min: 2600,
-                max: 4800
+                min: 450,
+                max: 650
             },
             {
                 value: "booking",
                 label: "Booking Website",
                 desc: "Appointments, reservations or availability",
                 icon: "calendar-days",
-                min: 2200,
-                max: 3900
+                min: 400,
+                max: 600
             },
             {
                 value: "custom",
                 label: "Custom Web Platform",
                 desc: "Advanced workflows or custom functionality",
                 icon: "code-2",
-                min: 3800,
-                max: 7200
+                min: 550,
+                max: 750
             }
         ]
     },
@@ -132,32 +132,32 @@ const questions = [
                 label: "2–5 Pages",
                 desc: "A small company website",
                 icon: "files",
-                min: 300,
-                max: 650
+                min: 80,
+                max: 150
             },
             {
                 value: "6-10",
                 label: "6–10 Pages",
                 desc: "A growing business website",
                 icon: "layout-grid",
-                min: 700,
-                max: 1400
+                min: 150,
+                max: 250
             },
             {
                 value: "11-20",
                 label: "11–20 Pages",
                 desc: "More services, content or locations",
                 icon: "layers",
-                min: 1400,
-                max: 2600
+                min: 220,
+                max: 350
             },
             {
                 value: "20+",
                 label: "20+ Pages",
                 desc: "Large content or complex structure",
                 icon: "library",
-                min: 2500,
-                max: 5000
+                min: 300,
+                max: 450
             }
         ]
     },
@@ -174,48 +174,48 @@ const questions = [
                 label: "Advanced Forms",
                 desc: "Quotes, enquiries or applications",
                 icon: "mail",
-                min: 150,
-                max: 350
+                min: 30,
+                max: 60
             },
             {
                 value: "booking",
                 label: "Booking System",
                 desc: "Appointments or reservations",
                 icon: "calendar-check",
-                min: 450,
-                max: 900
+                min: 70,
+                max: 120
             },
             {
                 value: "payments",
                 label: "Online Payments",
                 desc: "Accept secure online payments",
                 icon: "credit-card",
-                min: 500,
-                max: 1000
+                min: 80,
+                max: 150
             },
             {
                 value: "multilingual",
                 label: "Multilingual",
                 desc: "Two or more languages",
                 icon: "languages",
-                min: 350,
-                max: 750
+                min: 50,
+                max: 100
             },
             {
                 value: "blog",
                 label: "Blog / News",
                 desc: "Publish articles and updates",
                 icon: "book-open",
-                min: 200,
-                max: 450
+                min: 40,
+                max: 80
             },
             {
                 value: "members",
                 label: "Member Area",
                 desc: "Accounts, login or private content",
                 icon: "users",
-                min: 850,
-                max: 1700
+                min: 100,
+                max: 180
             }
         ]
     },
@@ -232,23 +232,23 @@ const questions = [
                 desc: "Professional, efficient and minimal",
                 icon: "layout-template",
                 min: 0,
-                max: 250
+                max: 0
             },
             {
                 value: "premium",
                 label: "Premium",
                 desc: "More custom UI and stronger visual polish",
                 icon: "sparkles",
-                min: 550,
-                max: 1200
+                min: 80,
+                max: 150
             },
             {
                 value: "custom",
                 label: "Fully Custom",
                 desc: "High-end art direction and unique interactions",
                 icon: "pen-tool",
-                min: 1200,
-                max: 2600
+                min: 150,
+                max: 250
             }
         ]
     },
@@ -272,16 +272,16 @@ const questions = [
                 label: "Partially Ready",
                 desc: "Some content still needs work",
                 icon: "file-pen-line",
-                min: 250,
-                max: 700
+                min: 40,
+                max: 80
             },
             {
                 value: "need-copy",
                 label: "I Need Copywriting",
                 desc: "Help with page copy and structure",
                 icon: "pen-line",
-                min: 600,
-                max: 1400
+                min: 80,
+                max: 150
             }
         ]
     },
@@ -298,23 +298,23 @@ const questions = [
                 desc: "Titles, metadata and technical essentials",
                 icon: "search",
                 min: 0,
-                max: 200
+                max: 0
             },
             {
                 value: "local",
                 label: "Local SEO",
                 desc: "Built for local discovery and service areas",
                 icon: "map-pin",
-                min: 350,
-                max: 750
+                min: 50,
+                max: 100
             },
             {
                 value: "growth",
                 label: "Growth SEO",
                 desc: "Keyword structure and stronger on-page SEO",
                 icon: "chart-no-axes-column-increasing",
-                min: 750,
-                max: 1500
+                min: 100,
+                max: 180
             }
         ]
     },
@@ -346,16 +346,16 @@ const questions = [
                 label: "2–3 Weeks",
                 desc: "A faster priority schedule",
                 icon: "timer",
-                min: 300,
-                max: 700
+                min: 50,
+                max: 100
             },
             {
                 value: "asap",
                 label: "As Soon As Possible",
                 desc: "Rush production where feasible",
                 icon: "zap",
-                min: 700,
-                max: 1500
+                min: 100,
+                max: 180
             }
         ]
     }
@@ -368,31 +368,65 @@ const state = {
 };
 
 
-const stepText = document.getElementById("stepText");
-const progressPercent = document.getElementById("progressPercent");
-const progressBar = document.getElementById("progressBar");
-const questionTitle = document.getElementById("questionTitle");
-const questionSubtitle = document.getElementById("questionSubtitle");
-const optionsGrid = document.getElementById("optionsGrid");
-const continueBtn = document.getElementById("continueBtn");
-const privacyNote = document.querySelector(".privacy-note");
+const stepText =
+    document.getElementById("stepText");
+
+const progressPercent =
+    document.getElementById("progressPercent");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const questionTitle =
+    document.getElementById("questionTitle");
+
+const questionSubtitle =
+    document.getElementById("questionSubtitle");
+
+const optionsGrid =
+    document.getElementById("optionsGrid");
+
+const continueBtn =
+    document.getElementById("continueBtn");
+
+const privacyNote =
+    document.querySelector(".privacy-note");
 
 
 /* =========================================================
    ACTION BUTTONS
    ========================================================= */
 
-const actions = document.createElement("div");
-actions.className = "calculator-actions";
+const actions =
+    document.createElement("div");
 
-const backBtn = document.createElement("button");
-backBtn.type = "button";
-backBtn.className = "back-btn";
-backBtn.innerHTML = "<span>←</span> Back";
+actions.className =
+    "calculator-actions";
 
-continueBtn.parentNode.insertBefore(actions, continueBtn);
 
-actions.append(backBtn, continueBtn);
+const backBtn =
+    document.createElement("button");
+
+backBtn.type =
+    "button";
+
+backBtn.className =
+    "back-btn";
+
+backBtn.innerHTML =
+    "<span>←</span> Back";
+
+
+continueBtn.parentNode.insertBefore(
+    actions,
+    continueBtn
+);
+
+
+actions.append(
+    backBtn,
+    continueBtn
+);
 
 
 /* =========================================================
@@ -400,9 +434,13 @@ actions.append(backBtn, continueBtn);
    ========================================================= */
 
 function refreshIcons() {
+
     if (window.lucide) {
+
         window.lucide.createIcons();
+
     }
+
 }
 
 
@@ -411,6 +449,7 @@ function refreshIcons() {
    ========================================================= */
 
 function optionMarkup(option) {
+
     return `
         <button
             class="option-card"
@@ -419,11 +458,16 @@ function optionMarkup(option) {
         >
             <i data-lucide="${option.icon}"></i>
 
-            <strong>${option.label}</strong>
+            <strong>
+                ${option.label}
+            </strong>
 
-            <span>${option.desc}</span>
+            <span>
+                ${option.desc}
+            </span>
         </button>
     `;
+
 }
 
 
@@ -433,26 +477,41 @@ function optionMarkup(option) {
 
 function renderStep() {
 
-    const question = questions[state.currentStep];
+    const question =
+        questions[state.currentStep];
 
-    const stepNumber = state.currentStep + 1;
 
-    const percent = Math.round(
-        (stepNumber / questions.length) * 100
-    );
+    const stepNumber =
+        state.currentStep + 1;
+
+
+    const percent =
+        Math.round(
+            (
+                stepNumber /
+                questions.length
+            ) * 100
+        );
 
 
     stepText.textContent =
         `STEP ${String(stepNumber).padStart(2, "0")} OF ${String(questions.length).padStart(2, "0")}`;
 
-    progressPercent.textContent = `${percent}%`;
 
-    progressBar.style.width = `${percent}%`;
+    progressPercent.textContent =
+        `${percent}%`;
 
 
-    questionTitle.textContent = question.title;
+    progressBar.style.width =
+        `${percent}%`;
 
-    questionSubtitle.textContent = question.subtitle;
+
+    questionTitle.textContent =
+        question.title;
+
+
+    questionSubtitle.textContent =
+        question.subtitle;
 
 
     optionsGrid.innerHTML =
@@ -467,22 +526,40 @@ function renderStep() {
     );
 
 
-    backBtn.hidden = state.currentStep === 0;
+    backBtn.hidden =
+        state.currentStep === 0;
+
+
+    backBtn.innerHTML =
+        "<span>←</span> Back";
 
 
     continueBtn.innerHTML =
-        state.currentStep === questions.length - 1
+        state.currentStep ===
+        questions.length - 1
+
             ? "See my estimate <span>→</span>"
+
             : "Continue <span>→</span>";
 
 
-    restoreSelection(question);
+    restoreSelection(
+        question
+    );
 
-    updateContinueState(question);
 
-    bindOptionEvents(question);
+    updateContinueState(
+        question
+    );
+
+
+    bindOptionEvents(
+        question
+    );
+
 
     refreshIcons();
+
 }
 
 
@@ -492,21 +569,30 @@ function renderStep() {
 
 function restoreSelection(question) {
 
-    const saved = state.answers[question.id];
+    const saved =
+        state.answers[question.id];
 
 
     optionsGrid
-        .querySelectorAll(".option-card")
+        .querySelectorAll(
+            ".option-card"
+        )
         .forEach(card => {
 
-            const value = card.dataset.value;
+            const value =
+                card.dataset.value;
 
 
-            if (question.type === "multi") {
+            if (
+                question.type ===
+                "multi"
+            ) {
 
                 const values =
                     Array.isArray(saved)
+
                         ? saved
+
                         : [];
 
 
@@ -515,7 +601,9 @@ function restoreSelection(question) {
                     values.includes(value)
                 );
 
-            } else {
+            }
+
+            else {
 
                 card.classList.toggle(
                     "selected",
@@ -525,6 +613,7 @@ function restoreSelection(question) {
             }
 
         });
+
 }
 
 
@@ -539,20 +628,26 @@ function updateContinueState(question) {
         question.optional
     ) {
 
-        continueBtn.disabled = false;
+        continueBtn.disabled =
+            false;
 
         return;
+
     }
 
 
-    const answer = state.answers[question.id];
+    const answer =
+        state.answers[question.id];
 
 
     continueBtn.disabled =
         question.type === "multi"
+
             ? !Array.isArray(answer) ||
               answer.length === 0
+
             : !answer;
+
 }
 
 
@@ -563,7 +658,9 @@ function updateContinueState(question) {
 function bindOptionEvents(question) {
 
     optionsGrid
-        .querySelectorAll(".option-card")
+        .querySelectorAll(
+            ".option-card"
+        )
         .forEach(card => {
 
             card.addEventListener(
@@ -576,38 +673,55 @@ function bindOptionEvents(question) {
 
                     /* MULTIPLE SELECT */
 
-                    if (question.type === "multi") {
+                    if (
+                        question.type ===
+                        "multi"
+                    ) {
 
                         const current =
                             Array.isArray(
-                                state.answers[question.id]
+                                state.answers[
+                                    question.id
+                                ]
                             )
+
                                 ? [
                                     ...state.answers[
                                         question.id
                                     ]
                                   ]
+
                                 : [];
 
 
                         const index =
-                            current.indexOf(value);
+                            current.indexOf(
+                                value
+                            );
 
 
-                        if (index >= 0) {
+                        if (
+                            index >= 0
+                        ) {
 
                             current.splice(
                                 index,
                                 1
                             );
 
+
                             card.classList.remove(
                                 "selected"
                             );
 
-                        } else {
+                        }
 
-                            current.push(value);
+                        else {
+
+                            current.push(
+                                value
+                            );
+
 
                             card.classList.add(
                                 "selected"
@@ -636,24 +750,29 @@ function bindOptionEvents(question) {
                             .querySelectorAll(
                                 ".option-card"
                             )
-                            .forEach(item => {
+                            .forEach(
+                                item => {
 
-                                item.classList.toggle(
-                                    "selected",
-                                    item === card
-                                );
+                                    item.classList.toggle(
+                                        "selected",
+                                        item === card
+                                    );
 
-                            });
+                                }
+                            );
+
                     }
 
 
                     updateContinueState(
                         question
                     );
+
                 }
             );
 
         });
+
 }
 
 
@@ -661,17 +780,27 @@ function bindOptionEvents(question) {
    FIND OPTION
    ========================================================= */
 
-function findOption(questionId, value) {
+function findOption(
+    questionId,
+    value
+) {
 
     const question =
         questions.find(
-            item => item.id === questionId
+            item =>
+                item.id ===
+                questionId
         );
 
 
-    return question?.options.find(
-        option => option.value === value
-    );
+    return question
+        ?.options
+        .find(
+            option =>
+                option.value ===
+                value
+        );
+
 }
 
 
@@ -685,63 +814,113 @@ function calculateEstimate() {
     let max = 0;
 
 
-    questions.forEach(question => {
+    questions.forEach(
+        question => {
 
-        const answer =
-            state.answers[question.id];
-
-
-        if (question.type === "multi") {
-
-            const values =
-                Array.isArray(answer)
-                    ? answer
-                    : [];
+            const answer =
+                state.answers[
+                    question.id
+                ];
 
 
-            values.forEach(value => {
+            if (
+                question.type ===
+                "multi"
+            ) {
+
+                const values =
+                    Array.isArray(answer)
+
+                        ? answer
+
+                        : [];
+
+
+                values.forEach(
+                    value => {
+
+                        const option =
+                            findOption(
+                                question.id,
+                                value
+                            );
+
+
+                        if (option) {
+
+                            min +=
+                                option.min || 0;
+
+                            max +=
+                                option.max || 0;
+
+                        }
+
+                    }
+                );
+
+            }
+
+            else if (answer) {
 
                 const option =
                     findOption(
                         question.id,
-                        value
+                        answer
                     );
 
 
                 if (option) {
 
-                    min += option.min || 0;
-                    max += option.max || 0;
+                    min +=
+                        option.min || 0;
+
+                    max +=
+                        option.max || 0;
 
                 }
-
-            });
-
-        } else if (answer) {
-
-            const option =
-                findOption(
-                    question.id,
-                    answer
-                );
-
-
-            if (option) {
-
-                min += option.min || 0;
-                max += option.max || 0;
 
             }
 
         }
+    );
 
-    });
+
+    /*
+       MOHSIN BUILDS
+       MARKET-ENTRY PRICE CEILING
+
+       We can increase this later
+       as demand, experience,
+       testimonials and case studies grow.
+    */
+
+    const finalMin =
+        Math.min(
+            min,
+            1000
+        );
+
+
+    const finalMax =
+        Math.min(
+            max,
+            1200
+        );
 
 
     return {
-        min,
-        max
+
+        min: finalMin,
+
+        max:
+            Math.max(
+                finalMin,
+                finalMax
+            )
+
     };
+
 }
 
 
@@ -793,13 +972,18 @@ function calculateTimeline() {
         Array.isArray(
             state.answers.features
         )
-            ? state.answers.features.length
+
+            ? state.answers
+                .features
+                .length
+
             : 0;
 
 
-    weeks += Math.ceil(
-        features / 2
-    );
+    weeks +=
+        Math.ceil(
+            features / 2
+        );
 
 
     if (
@@ -846,7 +1030,10 @@ function calculateTimeline() {
         );
 
 
-    return `${minWeeks}–${maxWeeks} weeks`;
+    return (
+        `${minWeeks}–${maxWeeks} weeks`
+    );
+
 }
 
 
@@ -864,65 +1051,95 @@ function formatEUR(value) {
             maximumFractionDigits: 0
         }
     ).format(value);
+
 }
 
 
 /* =========================================================
-   RESULT SCREEN
+   RESULT SCREEN HELPERS
    ========================================================= */
 
-function getOptionLabel(questionId, value) {
+function getOptionLabel(
+    questionId,
+    value
+) {
 
-    const option = findOption(
-        questionId,
-        value
-    );
+    const option =
+        findOption(
+            questionId,
+            value
+        );
+
 
     return option
         ? option.label
         : "";
+
 }
 
 
 function getScopeSummary() {
 
     const features =
-        Array.isArray(state.answers.features)
-            ? state.answers.features.length
+        Array.isArray(
+            state.answers.features
+        )
+
+            ? state.answers
+                .features
+                .length
+
             : 0;
 
 
     return [
         {
             label: "Website",
-            value: getOptionLabel(
-                "websiteType",
-                state.answers.websiteType
-            )
+
+            value:
+                getOptionLabel(
+                    "websiteType",
+                    state.answers
+                        .websiteType
+                )
         },
+
         {
             label: "Pages",
-            value: getOptionLabel(
-                "pages",
-                state.answers.pages
-            )
+
+            value:
+                getOptionLabel(
+                    "pages",
+                    state.answers
+                        .pages
+                )
         },
+
         {
             label: "Design",
-            value: getOptionLabel(
-                "designLevel",
-                state.answers.designLevel
-            )
+
+            value:
+                getOptionLabel(
+                    "designLevel",
+                    state.answers
+                        .designLevel
+                )
         },
+
         {
             label: "Features",
+
             value:
                 features > 0
+
                     ? `${features} selected`
+
                     : "No extras"
         }
     ];
+
 }
+
 
 /* =========================================================
    SHOW RESULT
@@ -933,30 +1150,45 @@ function showResult() {
     const {
         min,
         max
-    } = calculateEstimate();
+    } =
+        calculateEstimate();
+
 
     const timeline =
         calculateTimeline();
 
+
     const scope =
         getScopeSummary();
 
+
     const scopeHTML =
         scope
-            .map(item => `
-                <div class="scope-item">
-                    <span>${item.label}</span>
-                    <strong>${item.value}</strong>
-                </div>
-            `)
+            .map(
+                item => `
+                    <div class="scope-item">
+
+                        <span>
+                            ${item.label}
+                        </span>
+
+                        <strong>
+                            ${item.value}
+                        </strong>
+
+                    </div>
+                `
+            )
             .join("");
 
 
     stepText.textContent =
         "YOUR ESTIMATE";
 
+
     progressPercent.textContent =
         "100%";
+
 
     progressBar.style.width =
         "100%";
@@ -965,6 +1197,7 @@ function showResult() {
     questionTitle.textContent =
         "Your website estimate is ready.";
 
+
     questionSubtitle.textContent =
         "Here’s a realistic professional planning range based on the scope you selected.";
 
@@ -972,6 +1205,7 @@ function showResult() {
     optionsGrid.classList.remove(
         "multi-select"
     );
+
 
     optionsGrid.classList.add(
         "result-mode"
@@ -986,71 +1220,97 @@ function showResult() {
                 TYPICAL PROFESSIONAL MARKET RANGE
             </span>
 
+
             <strong class="estimate-price">
                 ${formatEUR(min)}
                 –
                 ${formatEUR(max)}
             </strong>
 
+
             <p class="estimate-intro">
                 Estimated investment for a project
                 with your selected requirements.
             </p>
 
+
             <div class="estimate-summary">
                 ${scopeHTML}
             </div>
 
+
             <div class="estimate-timeline">
 
                 <div class="estimate-timeline-icon">
+
                     <i data-lucide="clock-3"></i>
+
                 </div>
 
+
                 <div>
-                    <span>Estimated build time</span>
-                    <strong>${timeline}</strong>
+
+                    <span>
+                        Estimated build time
+                    </span>
+
+                    <strong>
+                        ${timeline}
+                    </strong>
+
                 </div>
 
             </div>
 
+
             <div class="estimate-points">
 
                 <div>
+
                     <i data-lucide="check-circle-2"></i>
 
                     <span>
                         Responsive website design
                         and development
                     </span>
+
                 </div>
 
+
                 <div>
+
                     <i data-lucide="check-circle-2"></i>
 
                     <span>
                         Core technical setup
                         and launch preparation
                     </span>
+
                 </div>
 
+
                 <div>
+
                     <i data-lucide="check-circle-2"></i>
 
                     <span>
                         Scope can be tailored
                         before development begins
                     </span>
+
                 </div>
 
             </div>
 
+
             <p class="estimate-disclaimer">
+
                 This calculator provides a professional
                 planning estimate and is not a fixed
                 Mohsin Builds quote. Final pricing can
                 vary depending on content, integrations,
                 complexity and confirmed project scope.
+
             </p>
 
         </div>
@@ -1062,13 +1322,17 @@ function showResult() {
     );
 
 
-    backBtn.hidden = false;
+    backBtn.hidden =
+        false;
+
 
     backBtn.innerHTML =
-        "<span>←</span> Edit answers";
+        "<span>↻</span> Start over";
 
 
-    continueBtn.disabled = false;
+    continueBtn.disabled =
+        false;
+
 
     continueBtn.innerHTML =
         "Get a tailored quote <span>↗</span>";
@@ -1081,6 +1345,7 @@ function showResult() {
     if (privacyNote) {
 
         privacyNote.innerHTML = `
+
             <i data-lucide="shield-check"></i>
 
             <span>
@@ -1093,6 +1358,7 @@ function showResult() {
 
 
     refreshIcons();
+
 }
 
 
@@ -1105,7 +1371,9 @@ continueBtn.addEventListener(
     () => {
 
         if (
-            continueBtn.dataset.resultCta ===
+            continueBtn
+                .dataset
+                .resultCta ===
             "true"
         ) {
 
@@ -1115,12 +1383,18 @@ continueBtn.addEventListener(
                 "noopener,noreferrer"
             );
 
+
             return;
+
         }
 
 
-        if (continueBtn.disabled) {
+        if (
+            continueBtn.disabled
+        ) {
+
             return;
+
         }
 
 
@@ -1131,9 +1405,12 @@ continueBtn.addEventListener(
 
             state.currentStep += 1;
 
+
             renderStep();
 
-        } else {
+        }
+
+        else {
 
             showResult();
 
@@ -1144,48 +1421,97 @@ continueBtn.addEventListener(
 
 
 /* =========================================================
-   BACK
+   RESTART CALCULATOR
+   ========================================================= */
+
+function restartCalculator() {
+
+    state.currentStep =
+        0;
+
+
+    Object.keys(
+        state.answers
+    ).forEach(
+        key => {
+
+            delete state.answers[
+                key
+            ];
+
+        }
+    );
+
+
+    delete continueBtn
+        .dataset
+        .resultCta;
+
+
+    actions.classList.remove(
+        "result-actions"
+    );
+
+
+    optionsGrid.classList.remove(
+        "result-mode"
+    );
+
+
+    if (privacyNote) {
+
+        privacyNote.innerHTML = `
+
+            <i data-lucide="lock-keyhole"></i>
+
+            <span>
+                Your answers are not stored.
+            </span>
+        `;
+
+    }
+
+
+    renderStep();
+
+}
+
+
+/* =========================================================
+   BACK / START OVER
    ========================================================= */
 
 backBtn.addEventListener(
     "click",
     () => {
 
+        /*
+           RESULT SCREEN:
+           start a fresh calculator
+        */
+
         if (
-            continueBtn.dataset.resultCta ===
+            continueBtn
+                .dataset
+                .resultCta ===
             "true"
         ) {
 
-            delete continueBtn.dataset.resultCta;
-
-            actions.classList.remove(
-                "result-actions"
-            );
-
-            optionsGrid.classList.remove(
-                "result-mode"
-            );
-
-
-            if (privacyNote) {
-
-                privacyNote.innerHTML = `
-                    <i data-lucide="lock-keyhole"></i>
-                    <span>
-                        Your answers are not stored.
-                    </span>
-                `;
-
-            }
-
-
-            renderStep();
+            restartCalculator();
 
             return;
+
         }
 
 
-        if (state.currentStep > 0) {
+        /*
+           NORMAL CALCULATOR:
+           go back one step
+        */
+
+        if (
+            state.currentStep > 0
+        ) {
 
             state.currentStep -= 1;
 
@@ -1203,66 +1529,151 @@ backBtn.addEventListener(
 
 renderStep();
 
+
 /* =========================================================
    GOOGLE ANALYTICS CONSENT
-========================================================= */
+   ========================================================= */
 
-const GA_MEASUREMENT_ID = "G-WTJVSGKF11";
-const CONSENT_KEY = "mohsin_labs_analytics_consent";
+const GA_MEASUREMENT_ID =
+    "G-WTJVSGKF11";
 
-const consentBanner = document.getElementById("consentBanner");
-const acceptAnalyticsBtn = document.getElementById("acceptAnalytics");
-const rejectAnalyticsBtn = document.getElementById("rejectAnalytics");
-const cookieSettingsBtn = document.getElementById("cookieSettingsBtn");
 
+const CONSENT_KEY =
+    "mohsin_labs_analytics_consent";
+
+
+const consentBanner =
+    document.getElementById(
+        "consentBanner"
+    );
+
+
+const acceptAnalyticsBtn =
+    document.getElementById(
+        "acceptAnalytics"
+    );
+
+
+const rejectAnalyticsBtn =
+    document.getElementById(
+        "rejectAnalytics"
+    );
+
+
+const cookieSettingsBtn =
+    document.getElementById(
+        "cookieSettingsBtn"
+    );
+
+
+/* =========================================================
+   LOAD GOOGLE ANALYTICS
+   ========================================================= */
 
 function loadGoogleAnalytics() {
 
-    if (window.__mohsinAnalyticsLoaded) {
+    if (
+        window
+            .__mohsinAnalyticsLoaded
+    ) {
+
         return;
+
     }
 
-    window.__mohsinAnalyticsLoaded = true;
 
-    window.dataLayer = window.dataLayer || [];
-
-    window.gtag = window.gtag || function () {
-        window.dataLayer.push(arguments);
-    };
+    window
+        .__mohsinAnalyticsLoaded =
+        true;
 
 
-    /* Analytics allowed, advertising stays disabled */
-
-    gtag("consent", "update", {
-        analytics_storage: "granted",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied"
-    });
+    window.dataLayer =
+        window.dataLayer || [];
 
 
-    /* Load Google Analytics */
+    window.gtag =
+        window.gtag ||
+        function () {
 
-    const googleTag = document.createElement("script");
+            window.dataLayer.push(
+                arguments
+            );
 
-    googleTag.async = true;
+        };
+
+
+    /*
+       Analytics allowed.
+       Advertising remains disabled.
+    */
+
+    gtag(
+        "consent",
+        "update",
+        {
+            analytics_storage:
+                "granted",
+
+            ad_storage:
+                "denied",
+
+            ad_user_data:
+                "denied",
+
+            ad_personalization:
+                "denied"
+        }
+    );
+
+
+    /*
+       Load Google Analytics
+    */
+
+    const googleTag =
+        document.createElement(
+            "script"
+        );
+
+
+    googleTag.async =
+        true;
+
 
     googleTag.src =
         `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
 
-    document.head.appendChild(googleTag);
+
+    document.head.appendChild(
+        googleTag
+    );
 
 
-    gtag("js", new Date());
+    gtag(
+        "js",
+        new Date()
+    );
 
-    gtag("config", GA_MEASUREMENT_ID);
+
+    gtag(
+        "config",
+        GA_MEASUREMENT_ID
+    );
+
 }
 
+
+/* =========================================================
+   CONSENT BANNER HELPERS
+   ========================================================= */
 
 function hideConsentBanner() {
 
     if (consentBanner) {
-        consentBanner.hidden = true;
+
+        consentBanner.hidden =
+            true;
+
     }
 
 }
@@ -1271,37 +1682,53 @@ function hideConsentBanner() {
 function showConsentBanner() {
 
     if (consentBanner) {
-        consentBanner.hidden = false;
+
+        consentBanner.hidden =
+            false;
+
     }
 
 }
 
 
+/* =========================================================
+   DELETE ANALYTICS COOKIES
+   ========================================================= */
+
 function deleteAnalyticsCookies() {
 
     document.cookie
         .split(";")
-        .forEach(cookie => {
+        .forEach(
+            cookie => {
 
-            const cookieName =
-                cookie
-                    .split("=")[0]
-                    .trim();
+                const cookieName =
+                    cookie
+                        .split("=")[0]
+                        .trim();
 
-            if (
-                cookieName === "_ga" ||
-                cookieName.startsWith("_ga_")
-            ) {
 
-                document.cookie =
-                    `${cookieName}=; Max-Age=0; path=/; SameSite=Lax`;
+                if (
+                    cookieName === "_ga" ||
+                    cookieName.startsWith(
+                        "_ga_"
+                    )
+                ) {
+
+                    document.cookie =
+                        `${cookieName}=; Max-Age=0; path=/; SameSite=Lax`;
+
+                }
 
             }
-
-        });
+        );
 
 }
 
+
+/* =========================================================
+   ACCEPT ANALYTICS
+   ========================================================= */
 
 function acceptAnalytics() {
 
@@ -1310,12 +1737,18 @@ function acceptAnalytics() {
         "granted"
     );
 
+
     loadGoogleAnalytics();
+
 
     hideConsentBanner();
 
 }
 
+
+/* =========================================================
+   REJECT ANALYTICS
+   ========================================================= */
 
 function rejectAnalytics() {
 
@@ -1327,30 +1760,52 @@ function rejectAnalytics() {
 
     /*
        If Analytics was previously enabled,
-       change consent and remove analytics cookies.
+       update consent and remove Analytics cookies.
     */
 
     if (
         window.__mohsinAnalyticsLoaded &&
-        typeof window.gtag === "function"
+        typeof window.gtag ===
+        "function"
     ) {
 
-        gtag("consent", "update", {
-            analytics_storage: "denied",
-            ad_storage: "denied",
-            ad_user_data: "denied",
-            ad_personalization: "denied"
-        });
+        gtag(
+            "consent",
+            "update",
+            {
+                analytics_storage:
+                    "denied",
+
+                ad_storage:
+                    "denied",
+
+                ad_user_data:
+                    "denied",
+
+                ad_personalization:
+                    "denied"
+            }
+        );
+
 
         deleteAnalyticsCookies();
 
+
         hideConsentBanner();
 
-        setTimeout(() => {
-            window.location.reload();
-        }, 150);
+
+        setTimeout(
+            () => {
+
+                window.location.reload();
+
+            },
+            150
+        );
+
 
         return;
+
     }
 
 
@@ -1361,22 +1816,32 @@ function rejectAnalytics() {
 
 /* =========================================================
    INITIAL CONSENT STATE
-========================================================= */
+   ========================================================= */
 
 const savedConsent =
-    localStorage.getItem(CONSENT_KEY);
+    localStorage.getItem(
+        CONSENT_KEY
+    );
 
 
-if (savedConsent === "granted") {
+if (
+    savedConsent ===
+    "granted"
+) {
 
     loadGoogleAnalytics();
 
 }
-else if (savedConsent === "denied") {
+
+else if (
+    savedConsent ===
+    "denied"
+) {
 
     hideConsentBanner();
 
 }
+
 else {
 
     showConsentBanner();
@@ -1385,8 +1850,8 @@ else {
 
 
 /* =========================================================
-   BUTTON EVENTS
-========================================================= */
+   CONSENT BUTTON EVENTS
+   ========================================================= */
 
 if (acceptAnalyticsBtn) {
 
