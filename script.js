@@ -362,11 +362,21 @@ const questions = [
 ];
 
 
+/* =========================================================
+   STATE
+   ========================================================= */
+
 const state = {
     currentStep: 0,
     answers: {}
 };
 
+let calculatorStartedTracked = false;
+
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
 
 const stepText =
     document.getElementById("stepText");
@@ -422,7 +432,6 @@ continueBtn.parentNode.insertBefore(
     continueBtn
 );
 
-
 actions.append(
     backBtn,
     continueBtn
@@ -436,9 +445,7 @@ actions.append(
 function refreshIcons() {
 
     if (window.lucide) {
-
         window.lucide.createIcons();
-
     }
 
 }
@@ -480,10 +487,8 @@ function renderStep() {
     const question =
         questions[state.currentStep];
 
-
     const stepNumber =
         state.currentStep + 1;
-
 
     const percent =
         Math.round(
@@ -497,18 +502,14 @@ function renderStep() {
     stepText.textContent =
         `STEP ${String(stepNumber).padStart(2, "0")} OF ${String(questions.length).padStart(2, "0")}`;
 
-
     progressPercent.textContent =
         `${percent}%`;
-
 
     progressBar.style.width =
         `${percent}%`;
 
-
     questionTitle.textContent =
         question.title;
-
 
     questionSubtitle.textContent =
         question.subtitle;
@@ -529,7 +530,6 @@ function renderStep() {
     backBtn.hidden =
         state.currentStep === 0;
 
-
     backBtn.innerHTML =
         "<span>←</span> Back";
 
@@ -543,20 +543,11 @@ function renderStep() {
             : "Continue <span>→</span>";
 
 
-    restoreSelection(
-        question
-    );
+    restoreSelection(question);
 
+    updateContinueState(question);
 
-    updateContinueState(
-        question
-    );
-
-
-    bindOptionEvents(
-        question
-    );
-
+    bindOptionEvents(question);
 
     refreshIcons();
 
@@ -590,9 +581,7 @@ function restoreSelection(question) {
 
                 const values =
                     Array.isArray(saved)
-
                         ? saved
-
                         : [];
 
 
@@ -669,6 +658,34 @@ function bindOptionEvents(question) {
 
                     const value =
                         card.dataset.value;
+
+
+                    /*
+                       TRACK FIRST CALCULATOR INTERACTION
+                    */
+
+                    if (
+                        !calculatorStartedTracked
+                    ) {
+
+                        const eventSent =
+                            trackAnalyticsEvent(
+                                "calculator_started",
+                                {
+                                    first_question:
+                                        question.id
+                                }
+                            );
+
+
+                        if (eventSent) {
+
+                            calculatorStartedTracked =
+                                true;
+
+                        }
+
+                    }
 
 
                     /* MULTIPLE SELECT */
@@ -750,16 +767,14 @@ function bindOptionEvents(question) {
                             .querySelectorAll(
                                 ".option-card"
                             )
-                            .forEach(
-                                item => {
+                            .forEach(item => {
 
-                                    item.classList.toggle(
-                                        "selected",
-                                        item === card
-                                    );
+                                item.classList.toggle(
+                                    "selected",
+                                    item === card
+                                );
 
-                                }
-                            );
+                            });
 
                     }
 
@@ -830,9 +845,7 @@ function calculateEstimate() {
 
                 const values =
                     Array.isArray(answer)
-
                         ? answer
-
                         : [];
 
 
@@ -889,10 +902,6 @@ function calculateEstimate() {
     /*
        MOHSIN BUILDS
        MARKET-ENTRY PRICE CEILING
-
-       We can increase this later
-       as demand, experience,
-       testimonials and case studies grow.
     */
 
     const finalMin =
@@ -1154,6 +1163,66 @@ function showResult() {
         calculateEstimate();
 
 
+    /*
+       ANALYTICS:
+       CALCULATOR COMPLETED
+    */
+
+    trackAnalyticsEvent(
+        "calculator_completed",
+        {
+            project_type:
+                state.answers.websiteType ||
+                "unknown",
+
+            business_type:
+                state.answers.businessType ||
+                "unknown",
+
+            estimate_min:
+                min,
+
+            estimate_max:
+                max
+        }
+    );
+
+
+    /*
+       ANALYTICS:
+       PROJECT TYPE
+    */
+
+    trackAnalyticsEvent(
+        "project_type",
+        {
+            project_type:
+                state.answers.websiteType ||
+                "unknown"
+        }
+    );
+
+
+    /*
+       ANALYTICS:
+       ESTIMATE RANGE
+    */
+
+    trackAnalyticsEvent(
+        "estimate_range",
+        {
+            estimate_range:
+                `${min}-${max}`,
+
+            estimate_min:
+                min,
+
+            estimate_max:
+                max
+        }
+    );
+
+
     const timeline =
         calculateTimeline();
 
@@ -1370,12 +1439,46 @@ continueBtn.addEventListener(
     "click",
     () => {
 
+        /*
+           RESULT CTA
+        */
+
         if (
             continueBtn
                 .dataset
                 .resultCta ===
             "true"
         ) {
+
+            const {
+                min,
+                max
+            } =
+                calculateEstimate();
+
+
+            trackAnalyticsEvent(
+                "tailored_quote_clicked",
+                {
+                    project_type:
+                        state.answers.websiteType ||
+                        "unknown",
+
+                    business_type:
+                        state.answers.businessType ||
+                        "unknown",
+
+                    estimate_range:
+                        `${min}-${max}`,
+
+                    estimate_min:
+                        min,
+
+                    estimate_max:
+                        max
+                }
+            );
+
 
             window.open(
                 "https://mohsinbuilds.netlify.app",
@@ -1405,7 +1508,6 @@ continueBtn.addEventListener(
 
             state.currentStep += 1;
 
-
             renderStep();
 
         }
@@ -1428,6 +1530,10 @@ function restartCalculator() {
 
     state.currentStep =
         0;
+
+
+    calculatorStartedTracked =
+        false;
 
 
     Object.keys(
@@ -1487,7 +1593,7 @@ backBtn.addEventListener(
 
         /*
            RESULT SCREEN:
-           start a fresh calculator
+           START FRESH
         */
 
         if (
@@ -1506,7 +1612,7 @@ backBtn.addEventListener(
 
         /*
            NORMAL CALCULATOR:
-           go back one step
+           GO BACK ONE STEP
         */
 
         if (
@@ -1564,6 +1670,50 @@ const cookieSettingsBtn =
     document.getElementById(
         "cookieSettingsBtn"
     );
+
+
+/* =========================================================
+   ANALYTICS EVENT TRACKING
+   ========================================================= */
+
+function trackAnalyticsEvent(
+    eventName,
+    parameters = {}
+) {
+
+    const analyticsAllowed =
+        localStorage.getItem(
+            CONSENT_KEY
+        ) === "granted";
+
+
+    if (!analyticsAllowed) {
+
+        return false;
+
+    }
+
+
+    if (
+        typeof window.gtag !==
+        "function"
+    ) {
+
+        return false;
+
+    }
+
+
+    gtag(
+        "event",
+        eventName,
+        parameters
+    );
+
+
+    return true;
+
+}
 
 
 /* =========================================================
@@ -1760,7 +1910,7 @@ function rejectAnalytics() {
 
     /*
        If Analytics was previously enabled,
-       update consent and remove Analytics cookies.
+       update consent and remove cookies.
     */
 
     if (
